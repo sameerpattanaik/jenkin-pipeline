@@ -16,7 +16,7 @@ pipeline {
         NEXUS_GRP_REPO = 'vprofile-grp-repo'
         NEXUS_IP = '192.168.56.20'
         NEXUS_PORT = '8081'
-        NEXUS_LOGIN = "nexuslogin"
+        NEXUS_LOGIN = "NexusUserCredential"
         SONARSERVER = 'sonarserver'
         SONARSCANNER = 'sonarscanner'
     }
