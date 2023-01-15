@@ -39,13 +39,12 @@ pipeline {
             }
         }
         stage ('TEST'){
-            steps{
+            steps {
                 sh 'mv -s settings.xml test'
-            }
-            
+            }      
         }
         stage ('CHECKSTYLE ANALYSIS'){
-            steps{
+            steps {
                 sh 'mvn -s setting.xml checkstyle:checkstyle'
             }
 
