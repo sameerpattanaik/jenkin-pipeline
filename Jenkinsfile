@@ -1,8 +1,3 @@
-def COLOR_MAP = [
-    'FAILURE' : 'danger',
-    'SUCCESS' : 'good'
-]
-
 pipeline {
 
     agent any
@@ -38,12 +33,14 @@ pipeline {
                 }
             }
         }
-        stage ('TEST'){
+
+        stage('Test'){
             steps {
                 sh 'mv -s settings.xml test'
             }      
         }
-        stage ('CHECKSTYLE ANALYSIS'){
+
+        stage('Checkstyle Analysis'){
             steps {
                 sh 'mvn -s setting.xml checkstyle:checkstyle'
             }
